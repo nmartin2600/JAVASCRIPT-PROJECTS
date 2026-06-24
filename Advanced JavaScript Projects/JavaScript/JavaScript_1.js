@@ -28,3 +28,8 @@ function color_choice() {
 
     document.getElementById("output").innerHTML = color_output;
 }
+
+function sentence() {
+    let sentences = document.getElementsByClassName("click");
+    sentences[0].innerHTML = "Hello, World!";
+}
