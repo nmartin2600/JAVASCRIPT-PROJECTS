@@ -33,3 +33,14 @@ function sentence() {
     let sentences = document.getElementsByClassName("click");
     sentences[0].innerHTML = "Hello, World!";
 }
+
+const c = document.getElementById("draw");
+const ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Hello, World!", 200, 50);
+
+const grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "orange");
+grd.addColorStop(1, "purple");
+ctx.fillStyle = grd;
+ctx.fillRect(20, 20, 150, 100);
