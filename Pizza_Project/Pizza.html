@@ -13,41 +13,111 @@
             <input id="btnOrder" type="button" onclick="getReceipt()"
                 value="Place Order">
             <form id="frmMenu">
-                <div class="menu left">
+                <div class="menu-category">
                     <h3>Size:</h3>
-                    <input class="size" type="radio" name="Size"
-                        value ="Personal Pizza">Personal Pizza<br>
-                    <input class="size" type="radio" name="Size"
-                        value ="Medium Pizza">Medium Pizza<br>
-                    <input class="size" type="radio" name="Size"
-                        value ="Large Pizza">Large Pizza<br>
-                    <input class="size" type="radio" name="Size"
-                        value ="Extra Large Pizza">Extra Large Pizza<br>
-                    <input class="size" type="radio" name="Size"
-                        value="Party Pizza">Party Pizza<br>
+                    <div class="input-group">
+                        <div class="option-row">
+                            <input class="size" id="size1" type="radio" name="Size"
+                                value="Personal Pizza">
+                            <label for="size1">Personal Pizza</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="size" id="size2" type="radio" name="Size"
+                                value="Medium Pizza">
+                            <label for="size2">Medium Pizza</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="size" id="size3" type="radio" name="Size"
+                                value="Large Pizza">
+                            <label for="size3">Large Pizza</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="size" id="size4" type="radio" name="Size"
+                                value="Extra Large Pizza">
+                            <label for="size4">Extra Large Pizza</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="size" id="size5" type="radio" name="Size"
+                                value="Party Pizza">
+                            <label for="size5">Party Pizza</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu right">
+                <div class="menu-category">
                     <h3>Meats:</h3>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Pepperoni">Pepperoni<br>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Sausage">Sausage<br>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Canadian Bacon">Canadian Bacon<br>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Ground Beef">Ground Beef<br>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Anchovy">Anchovy<br>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Chicken">Chicken<br>
-                    <input class="toppings" type="checkbox" name="Topping"
-                        value="Salami">Salami<br>
+                    <div class="input-group">
+                        <div class="option-row">
+                            <input class="toppings" id="top1" type="checkbox" name="Topping"
+                                value="Pepperoni">
+                            <label for="top1">Pepperoni</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="toppings" id="top2" type="checkbox" name="Topping"
+                                value="Sausage">
+                            <label for="top2">Sausage</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="toppings" id="top3" type="checkbox" name="Topping"
+                                value="Canadian Bacon">
+                            <label for="top3">Canadian Bacon</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="toppings" id="top4" type="checkbox" name="Topping"
+                                value="Ground Beef">
+                            <label for="top4">Ground Beef</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="toppings" id="top5" type="checkbox" name="Topping"
+                                value="Anchovy">
+                            <label for="top5">Anchovy</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="toppings" id="top6" type="checkbox" name="Topping"
+                                value="Chicken">
+                            <label for="top6">Chicken</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="toppings" id="top7" type="checkbox" name="Topping"
+                                value="Salami">
+                            <label for="top7">Salami</label>
+                        </div>
+                    </div>
                 </div>
-                <div id="cart">
-                    <div id="showText"></div>
-                    <div id="totalPrice"></div>
+                <div class="menu-category">
+                    <h3>Vegetables:</h3>
+                    <div class="input-group">
+                        <div class="option-row">
+                            <input class="vegetables" id="veg1" type="radio" name="Vegetable"
+                                value="Mushrooms">
+                            <label for="veg1">Mushrooms</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="vegetables" id="veg2" type="radio" name="Vegetable"
+                                value="Onions">
+                            <label for="veg2">Onions</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="vegetables" id="veg3" type="radio" name="Vegetable"
+                                value="Tomatoes">
+                            <label for="veg3">Tomatoes</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="vegetables" id="veg4" type="radio" name="Vegetable"
+                                value="Olives">
+                            <label for="veg4">Olives</label>
+                        </div>
+                        <div class="option-row">
+                            <input class="vegetables" id="veg5" type="radio" name="Vegetable"
+                                value="Green Peppers">
+                            <label for="veg5">Green Peppers</label>                                               
+                        </div>
+                    </div>
                 </div>
             </form>
+        </div>
+        <div id="cart">
+            <div id="showText"></div>
+            <div id="totalPrice"></div>
         </div>
     </body>
 </html>

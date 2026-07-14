@@ -28,9 +28,12 @@ function getReceipt() {
     else if (selectedSize === "Extra Large Pizza") {
         sizeTotal = 16;
     }
-    // Pizza is Party size
-    else {
+    else if (selectedSize === "Party Pizza") {
         sizeTotal = 18;
+    }
+    // Nothing was selected
+    else {
+        sizeTotal = 0;
     }
 
     runningTotal = sizeTotal;

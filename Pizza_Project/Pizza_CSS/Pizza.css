@@ -21,29 +21,37 @@ h3 {
     width: 400px;
     height: 470px;
     margin: 10px auto;
+    overflow: hidden;
 }
 
+/*Flexbox used to make each menu category display side by side*/
 #frmMenu {
-    width: 400px;
-    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.menu-category {
+    flex: 1;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 #totalPrice {
     width: 200px;
     height: 190px;
     margin: 0 auto;
-    float: right;
-}
-
-.left {
-    width: 200px;
-    height: 200px;
-    float: left;
-}
-
-.right {
-    width: 200px;
-    height: 200px;
     float: right;
 }
 
@@ -62,7 +70,8 @@ h3 {
 }
 
 #btnOrder {
-    margin: 10px 0px 0px 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px 110px 0px 110px;
     width: 100px;
     height: 40px;
 }
