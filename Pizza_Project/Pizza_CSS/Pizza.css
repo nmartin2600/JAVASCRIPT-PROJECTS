@@ -17,6 +17,7 @@ h3 {
     color: rgb(186, 53, 53);
 }
 
+/*div element that contains the entire menu*/
 #menuBG {
     width: 400px;
     height: 470px;
@@ -47,6 +48,7 @@ h3 {
     align-items: center;
     gap: 6px;
 }
+/****/
 
 #totalPrice {
     width: 200px;
