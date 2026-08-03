@@ -5,8 +5,17 @@
         <title>JS Challenges</title>
     </head>
     <style>
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
         .form-popup {
             display: none;
+        }
+
+        .div-zoom {
+            margin-left: 200px;
         }
 
         .move {
@@ -20,6 +29,16 @@
         @keyframes mymove {
             from {top: 0px;}
             to {top: 200px;}
+        }
+
+        .image-zoom {
+            animation: zoomin 15s forwards;
+        }
+
+        @keyframes zoomin {
+            0% { transform: scale(1,1); }
+            50% { transform: scale(1.2,1.2); }
+            100% { transform: scale(1,1); }
         }
     </style>
     <body>
@@ -39,6 +58,10 @@
             </form>
         </div>
         <div class="move"></div>
+        <div class="div-zoom">
+            <img src="https://www.learncodinganywhere.com/images/techcirclelogo.png"
+                class="image-zoom" alt="The Tech Academy logo">
+        </div>
         <script>
             function openForm() {
                 document.getElementById("myForm").style.display = "block";
