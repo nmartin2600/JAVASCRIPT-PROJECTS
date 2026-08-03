@@ -76,6 +76,15 @@
             right: 10px; 
             bottom: 10px; 
         }
+
+        #sticky {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+        }
     </style>
     <body>
         <div id="bookmark">
@@ -119,6 +128,7 @@
             <a href="https://www.w3schools.com/html/html_links.asp"
                 target="_blank">W3Schools HTML Tutorial</a>
         </div>
+        <button id="sticky" onclick="openFormSticky()">Contact Form</button>
         <script>
             $("#slideshow > div:gt(0)").hide();
 
@@ -134,6 +144,15 @@
         <script>
             function openForm() {
                 document.getElementById("myForm").style.display = "block";
+            }
+
+            function openFormSticky() {
+                const form = document.getElementById("myForm");
+                form.style.display = "block";
+                form.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
             }
 
             function closeForm() {
