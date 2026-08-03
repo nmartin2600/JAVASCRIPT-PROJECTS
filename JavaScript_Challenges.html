@@ -5,6 +5,10 @@
         <title>JS Challenges</title>
     </head>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
         img {
             width: 250px;
             height: 250px;
@@ -40,8 +44,19 @@
             50% { transform: scale(1.2,1.2); }
             100% { transform: scale(1,1); }
         }
+
+        #links {
+            margin-top: 800px;
+        }
+
+        #bookmark {
+            margin-bottom: 30px;
+        }
     </style>
     <body>
+        <div id="bookmark">
+            <a href="#links">Links</a>
+        </div>
         <button class="open-button" onclick="openForm()">Open Form</button>
         <div class="form-popup" id="myForm">
             <form action="" class="form-container">
@@ -61,6 +76,11 @@
         <div class="div-zoom">
             <img src="https://www.learncodinganywhere.com/images/techcirclelogo.png"
                 class="image-zoom" alt="The Tech Academy logo">
+        </div>
+        <div id="links">
+            <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>
+            <a href="https://www.w3schools.com/html/html_links.asp"
+                target="_blank">W3Schools HTML Tutorial</a>
         </div>
         <script>
             function openForm() {
