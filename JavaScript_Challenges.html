@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>JS Challenges</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+            integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous">
+        </script>
     </head>
     <style>
         html {
@@ -52,10 +55,31 @@
         #bookmark {
             margin-bottom: 30px;
         }
+
+        #bookmark a {
+            text-decoration: none;
+        }
+
+        #slideshow { 
+            margin: 300px auto; 
+            position: relative; 
+            width: 240px; 
+            height: 240px; 
+            padding: 10px; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+        }
+
+        #slideshow > div { 
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            right: 10px; 
+            bottom: 10px; 
+        }
     </style>
     <body>
         <div id="bookmark">
-            <a href="#links">Links</a>
+            <a href="#links">Go to links</a>
         </div>
         <button class="open-button" onclick="openForm()">Open Form</button>
         <div class="form-popup" id="myForm">
@@ -77,11 +101,36 @@
             <img src="https://www.learncodinganywhere.com/images/techcirclelogo.png"
                 class="image-zoom" alt="The Tech Academy logo">
         </div>
+        <div id="slideshow">
+            <div>
+                <img src="https://www.borrowmydoggy.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F4ij0poqn%2Fproduction%2Fe24bfbd855cda99e303975f2bd2a1bf43079b320-800x600.jpg&w=1080&q=80"
+                    alt="Dog image">
+            </div>
+            <div>
+                <img src="https://www.easytogrowbulbs.com/cdn/shop/articles/plumeria-for-sale.jpg?v=1557257275&width=1100"
+                    alt="Plant image">
+            </div>
+            <div>
+                Sample text
+            </div>
+        </div>
         <div id="links">
             <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>
             <a href="https://www.w3schools.com/html/html_links.asp"
                 target="_blank">W3Schools HTML Tutorial</a>
         </div>
+        <script>
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() {
+                $('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+            }, 3000);
+        </script>
         <script>
             function openForm() {
                 document.getElementById("myForm").style.display = "block";
