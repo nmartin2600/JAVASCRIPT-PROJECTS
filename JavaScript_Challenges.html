@@ -4,15 +4,35 @@
         <meta charset="UTF-8">
         <title>JS Challenges</title>
     </head>
+    <style>
+        .form-popup {
+            display: none;
+        }
+    </style>
     <body>
-        <form action="">
-            <label for="fname">First Name:</label><br>
-            <input type="text" name="fname" id="fname" required><br><br>
-            <label for="lname">Last Name:</label><br>
-            <input type="text" name="lname" id="lname" required><br><br>
-            <label for="phone">Phone #:</label><br>
-            <input type="tel" name="phone" id="phone" required><br><br>
-            <button type="submit">Submit</button>
-        </form>
+        <button class="open-button" onclick="openForm()">Open Form</button>
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <label for="fname">First Name:</label><br>
+                <input type="text" name="fname" id="fname" required><br><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" name="lname" id="lname" required><br><br>
+                <label for="phone">Phone #:</label><br>
+                <input type="tel" name="phone" id="phone" required><br><br>
+                <button type="submit">Submit</button>
+                <button type="button" class="cancel" onclick="closeForm()">
+                    Close
+                </button>
+            </form>
+        </div>
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
     </body>
 </html>
